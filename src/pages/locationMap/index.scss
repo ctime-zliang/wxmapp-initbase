@@ -1,0 +1,55 @@
+.map-top-container {
+	width: 100vw;
+	height: 100vh;
+	background-color: #ffffff;
+}
+
+.address-container {
+	height: 100%;
+	background-color: #ffffff;
+	.address-wrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		.address-map-wrapper {
+			position: relative;
+			height: 400px;
+			flex-shrink: 0;
+			.map-canvas {
+				width: 100%;
+				height: 100%;
+			}
+			.map-fixed-mark {
+				width: 55px;
+				height: 55px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate3d(-50%, -100%, 5px);
+			}
+			.map-fixed-mark-ani {
+				animation: bounceUp 0.8s ease;
+			}
+		}
+	}
+}
+
+@keyframes bounceUp {
+	0% {
+		transform: translate3d(-50%, -100%, 5px);
+	}
+	30% {
+		transform: translate3d(-50%, -180%, 5px);
+	}
+	50% {
+		transform: translate3d(-50%, -100%, 5px);
+	}
+	70% {
+		transform: translate3d(-50%, -140%, 5px);
+	}
+	100% {
+		transform: translate3d(-50%, -100%, 5px);
+	}
+}
